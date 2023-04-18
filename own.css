@@ -1,0 +1,82 @@
+:root {
+    --accent: #C04734;
+    --background: #3d4d5b;
+    --subtle: #486763;
+    --strong-accent: #ddcd89;
+    --shadow: black;
+    --tags: rgba(0,0,0,0.5);
+}
+
+.right-image, .left-image {
+    filter: drop-shadow(-10px 10px var(--shadow));
+}
+
+.right-image {
+    filter: drop-shadow(10px 10px 0px var(--shadow));
+}
+
+.clipped-image-info {
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0 0 0 0 round 10px);
+    position: relative;
+    display: inline-block;
+}
+
+.clipped-image-info span {
+    position: absolute;
+    background-color: var(--tags);
+    padding: 10px;
+}
+
+.right-image .clipped-image-info .dev-span {
+    left: -30px;
+    top: -20px;
+    padding-top: 30px;
+    padding-left: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+.right-image .clipped-image-info .year {
+    right: -30px;
+    bottom: -20px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    border-top-left-radius: 10px;
+}
+
+.left-image .clipped-image-info .year {
+    left: -30px;
+    bottom: -20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    border-top-right-radius: 10px;
+}
+
+.left-image .clipped-image-info .dev-span {
+    right: -30px;
+    top: -20px;
+    padding-top: 30px;
+    padding-right: 40px;
+    border-bottom-left-radius: 10px;
+}
+
+.menu {
+    filter: drop-shadow(-15px 0px var(--shadow));
+    /* filter: drop-shadow(15px, 0, black) !important; */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (h / w * 100) */
+}
+
+.youtube-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
